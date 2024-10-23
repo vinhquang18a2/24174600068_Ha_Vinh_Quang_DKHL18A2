@@ -1,0 +1,11 @@
+float(input("Nhập giá trị x : ")) 
+if x > 0:
+    math.log(x)
+    result = log4_x + logx_2
+    ket_qua =log4_x + logx_2
+    print("Kết quả của phương trình là:, ket_qua.2f ")
+else:
+    print("Giá trị của x không thoả mãn")
+
+
+

@@ -1,0 +1,7 @@
+float(input("Nhập giá trị của x:" ))
+if (x**4 + 1)**(1/7) > 0:
+    import math 
+    (-x + math.sqrt(x**2 +4))/((x**4 + 1)**(1/7))
+    print("Giá trị của F(x)là:, F(x)")
+else: 
+    print("Phương trình vô nghiệm")
