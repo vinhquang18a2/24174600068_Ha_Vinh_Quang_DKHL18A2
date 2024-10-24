@@ -4,7 +4,7 @@ if t_g > 0:
     cuong_do_dong_dien = 2.7
     cong_suat = 7000
     cong_suat = t_g*hieu_dien_the*cuong_do_dong_dien/3600*1000
-    phai_tra = cong_suot*7000
+    phai_tra = cong_suat*7000
     print("Tiền phải trả là:", phai_tra)
 else:
     print("Thời gian phải lớn hơn 0")
