@@ -1,0 +1,13 @@
+diem_cuoi_ki = float(input("điểm cuối kì: "))
+diem_giua_ki = float(input("điểm giữa kì: "))
+diem_chuyen_can = float(input("điểm chuyên cần: "))
+diem_tong_ket = diem_chuyen_can*0.2 + diem_giua_ki*0.3 + diem_cuoi_ki*0.4
+if diem_tong_ket >= 9:
+   print("xếp loại A")
+elif 7 <= diem_tong_ket < 9:
+   print("xếp loại B")
+elif 5 <= diem_tong_ket < 7:
+   print("xếp loại C")
+else:
+   print("xếp loại D")
+

@@ -1,0 +1,9 @@
+char = input("Nhập một kí tự: ")
+if char.isalpha() and len(char) == 1:
+    char = char.lower()
+    if char in 'aeiou':
+        print(f"{char} là nguyên âm")
+    else:
+        print(f"{char} là phụ âm")
+else:
+    print("Nhập một kí tự là chữ cái.")
