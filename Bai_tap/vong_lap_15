@@ -1,0 +1,46 @@
+def decimal_to_binary(decimal):
+    # Chuyển đổi số thập phân sang nhị phân
+    if decimal == 0:
+        return "0"
+
+    binary = ""
+    # Tính số lượng bit cần thiết để biểu diễn số thập phân
+    num_bits = len(bin(decimal)) - 2  # Bỏ qua '0b'
+    
+    # Sử dụng vòng lặp for để tạo chuỗi nhị phân
+    for i in range(num_bits - 1, -1, -1):
+        bit = (decimal >> i) & 1  # Lấy bit tại vị trí i
+        binary += str(bit)
+
+    return binary
+
+def binary_to_decimal(binary):
+    # Chuyển đổi số nhị phân sang thập phân
+    decimal = 0
+    # Sử dụng vòng lặp for để tính giá trị thập phân
+    for i in range(len(binary)):
+        decimal += int(binary[i]) * (2 ** (len(binary) - 1 - i))
+    return decimal
+
+# Hàm chính
+def main():
+    print("Chương trình chuyển đổi hệ cơ số:")
+    print("1. Chuyển từ thập phân sang nhị phân")
+    print("2. Chuyển từ nhị phân sang thập phân")
+    
+    choice = int(input("Chọn loại chuyển đổi (1/2): "))
+    
+    if choice == 1:
+        decimal = int(input("Nhập số thập phân: "))
+        binary = decimal_to_binary(decimal)
+        print(f"Số nhị phân tương ứng là: {binary}")
+    elif choice == 2:
+        binary = input("Nhập số nhị phân: ")
+        decimal = binary_to_decimal(binary)
+        print(f"Số thập phân tương ứng là: {decimal}")
+    else:
+        print("Lựa chọn không hợp lệ.")
+
+# Gọi hàm chính
+if __name__ == "__main__":
+    main()

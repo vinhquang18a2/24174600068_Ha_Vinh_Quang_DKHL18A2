@@ -1,0 +1,11 @@
+n = int(input("Nhập vào một số nguyên dương n: "))
+def find_perfect_squares_less_than_n(n):
+    perfect_squares = []
+    i = 1
+    while i * i < n:
+        perfect_squares.append(i * i)
+        i += 1
+    return perfect_squares
+perfect_squares = find_perfect_squares_less_than_n(n)
+print(f"Các số chính phương nhỏ hơn {n} là: {perfect_squares}")
+

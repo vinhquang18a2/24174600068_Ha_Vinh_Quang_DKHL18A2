@@ -1,0 +1,12 @@
+a = int(input("Nhập số thứ nhất: "))
+b = int(input("Nhập số thứ hai: "))
+def lcm(a, b):
+    max_val = max(a, b)
+    for i in range(max_val, (a * b) + 1, max_val):
+        if i % a == 0 and i % b == 0:
+            return i
+bcnn = lcm(a, b)
+print(f"Bội chung nhỏ nhất của {a} và {b} là: {bcnn}")
+
+
+

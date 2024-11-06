@@ -1,0 +1,22 @@
+tu_so = int(input("Nhập tử số: "))
+mau_so = int(input("Nhập mẫu số: "))
+def gcd(a, b):
+    min_val = min(abs(a), abs(b)) 
+    ucln = 1
+
+    for i in range(1, min_val + 1):
+        if a % i == 0 and b % i == 0:
+            ucln = i 
+    return ucln
+def simplify_fraction(tu_so, mau_so):
+    ucln = gcd(tu_so, mau_so)
+    tu_so //= ucln
+    mau_so //= ucln
+    return tu_so, mau_so
+if mau_so == 0:
+    print("Phân số không hợp lệ (mẫu số không thể bằng 0).")
+else:
+    # Gọi hàm rút gọn và in kết quả
+    tu_so_rut_gon, mau_so_rut_gon = simplify_fraction(tu_so, mau_so)
+    print(f"Phân số tối giản là: {tu_so_rut_gon}/{mau_so_rut_gon}")
+

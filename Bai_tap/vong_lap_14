@@ -1,0 +1,15 @@
+def print_pascal_triangle(n):
+    for line in range(n):
+        # In khoảng trắng để căn giữa tam giác
+        print(' ' * (n - line), end=' ')
+        
+        # Giá trị đầu tiên trong mỗi hàng là 1
+        C = 1
+        for i in range(line + 1):
+            print(C, end=' ')
+            C = C * (line - i) // (i + 1)  # Tính số tiếp theo trong hàng
+        print()  # Xuống dòng
+
+# Nhập số hàng từ người dùng
+rows = int(input("Nhập số hàng cho tam giác Pascal: "))
+print_pascal_triangle(rows)
