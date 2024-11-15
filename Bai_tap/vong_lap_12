@@ -16,7 +16,6 @@ def simplify_fraction(tu_so, mau_so):
 if mau_so == 0:
     print("Phân số không hợp lệ (mẫu số không thể bằng 0).")
 else:
-    # Gọi hàm rút gọn và in kết quả
     tu_so_rut_gon, mau_so_rut_gon = simplify_fraction(tu_so, mau_so)
     print(f"Phân số tối giản là: {tu_so_rut_gon}/{mau_so_rut_gon}")
 

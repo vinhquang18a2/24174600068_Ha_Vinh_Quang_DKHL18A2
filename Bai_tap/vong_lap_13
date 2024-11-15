@@ -1,4 +1,3 @@
-# Hàm kiểm tra số nguyên tố
 def is_prime(num):
     if num <= 1:
         return False
@@ -6,33 +5,22 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
-
-# Hàm tìm các thừa số nguyên tố
 def prime_factors(n):
     factors = []
-    # Kiểm tra số 2
     while n % 2 == 0:
         factors.append(2)
         n //= 2
-    
-    # Kiểm tra các số lẻ từ 3 đến √n
     for i in range(3, int(n**0.5) + 1, 2):
         while n % i == 0:
             factors.append(i)
             n //= i
-
-    # Nếu n là một số nguyên tố lớn hơn 2
     if n > 2:
         factors.append(n)
-
     return factors
-
-# Nhập số từ người dùng
 number = int(input("Nhập vào một số nguyên dương: "))
-
-# Gọi hàm và in kết quả
 if number > 0:
     factors = prime_factors(number)
     print(f"Các thừa số nguyên tố của {number} là: {factors}")
 else:
     print("Vui lòng nhập một số nguyên dương.")
+

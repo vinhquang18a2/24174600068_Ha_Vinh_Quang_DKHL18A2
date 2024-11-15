@@ -21,8 +21,6 @@ def binary_to_decimal(binary):
     for i in range(len(binary)):
         decimal += int(binary[i]) * (2 ** (len(binary) - 1 - i))
     return decimal
-
-# Hàm chính
 def main():
     print("Chương trình chuyển đổi hệ cơ số:")
     print("1. Chuyển từ thập phân sang nhị phân")
@@ -40,7 +38,5 @@ def main():
         print(f"Số thập phân tương ứng là: {decimal}")
     else:
         print("Lựa chọn không hợp lệ.")
-
-# Gọi hàm chính
 if __name__ == "__main__":
     main()
